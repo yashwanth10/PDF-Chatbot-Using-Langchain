@@ -11,13 +11,13 @@ Requirements
 To run this application, you'll need the following Python packages:
 
 **Requirements**<br/>
-streamlit
-langchain_groq
-langchain_community
-langchain_text_splitters
-langchain_core
-langchain_huggingface
-dotenv
+streamlit <br/>
+langchain_groq<br/>
+langchain_community<br/>
+langchain_text_splitters<br/>
+langchain_core<br/>
+langchain_huggingface<br/>
+dotenv<br/>
 faiss-cpu.
 
 All the necessary packages have been added in the requirements.txt file and the python environment used is of version 3.10. 
