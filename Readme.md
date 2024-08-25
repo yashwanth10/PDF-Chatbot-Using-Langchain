@@ -1,7 +1,7 @@
-Overview
+#Overview
 The PDF Document Chatbot is a Streamlit-based application that allows users to upload PDF files and interact with them using natural language queries. The chatbot leverages the LangChain and HuggingFace libraries to process and embed text from the uploaded PDFs, and uses the GROQ API of Llama-3.1-70b-Versatile for generating responses.
 
-Features
+#Features
 Upload PDF Files: Users can upload multiple PDF files.
 Chat with Documents: Users can ask questions about the content of the uploaded PDFs.
 Document Embedding: The application creates vector embeddings of the PDF content to facilitate efficient querying.
@@ -9,7 +9,7 @@ Chat History: Displays a history of user queries and chatbot responses.
 Document Similarity Search: Shows relevant parts of the documents related to the query.
 Requirements
 To run this application, you'll need the following Python packages:
-
+#Requirements
 streamlit
 langchain_groq
 langchain_community
@@ -19,17 +19,12 @@ langchain_huggingface
 dotenv
 faiss-cpu.
 
-To clone the repository :
-
-git clone https://github.com/yashwanth10/pdf-chatbot.git
-cd pdf-chatbot
-
 All the necessary packages have been added in the requirements.txt file and the python environment used is of version 3.10. 
 Run the following command to install all the packages :
 
 pip install -r requirements.txt
 
-Usage
+#Usage
 Enter API Keys:
 When you first open the app, you will be prompted to enter your GROQ API Key.
 
