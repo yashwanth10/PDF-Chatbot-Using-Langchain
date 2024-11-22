@@ -12,12 +12,12 @@ from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 import time
 
-# Set page configuration as the first Streamlit command
+
 st.set_page_config(page_title="PDF Document Chatbot", page_icon="📄", layout="wide")
 
 load_dotenv()
 
-# Function to initialize API keys
+
 def initialize_keys():
     groq_api_key = st.text_input("Enter your GROQ API Key:", type="password")
     os.environ["GROQ_API_KEY"] = groq_api_key
@@ -31,7 +31,7 @@ def initialize_keys():
 
 groq_api_key = initialize_keys()
 if not groq_api_key:
-    st.stop()  # Stop execution if the API key is not provided
+    st.stop()  
 
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="Llama-3.1-70b-Versatile")
@@ -47,16 +47,16 @@ prompt = ChatPromptTemplate.from_template(
 )
 
 
-# Using a relative path or an environment variable for universal paths
+
 save_directory = os.getenv("SAVE_DIRECTORY", "research_papers")
 
-#UI 
+
 st.title("📚 PDF Document Chatbot")
 st.markdown("Upload your PDFs and interact with them using natural language.")
 
 uploaded_files = st.file_uploader("Choose PDF files to upload", type="pdf", accept_multiple_files=True)
 
-# Process uploaded PDFs
+
 if uploaded_files:
     st.write("Uploading files...")
     for uploaded_file in uploaded_files:
